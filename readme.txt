@@ -9,7 +9,12 @@ https://gist.github.com/lemiorhan/97b4f827c08aed58a9d8
 2) gebruik jgitflow:
 2a) mvn jgitflow:feature-start
 2b) push en verifieer in github
-2c) mvn jgitflow:feature-finish
+2c) maak nog wat zijgingen
+2c1) mvn jgitflow:feature-finish -> error
+2c2) push + mvn jgitflow:feature-finish -> OK
+
+3a) controleer branch : zou develop moeten zijn
+3b) push nog een keer
 
 git & gitflow
 -------------
