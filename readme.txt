@@ -6,7 +6,10 @@ https://gist.github.com/lemiorhan/97b4f827c08aed58a9d8
 1a) create repo op github & do local git init
 1b) push master, maak develop aan en push
 
-2) gebruik jgitflow
+2) gebruik jgitflow:
+2a) mvn jgitflow:feature-start
+2b) push en verifieer in github
+2c) mvn jgitflow:feature-finish
 
 git & gitflow
 -------------
