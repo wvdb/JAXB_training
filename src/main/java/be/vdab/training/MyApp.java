@@ -10,6 +10,7 @@ import org.xml.sax.SAXException;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -24,7 +25,7 @@ import java.util.concurrent.ExecutionException;
 public class MyApp {
     private static final String CONTACT_JAXB_XML = "C:\\wim\\oak3 - cronos- training\\cursus_data_input_output\\Contact_JAXB.xml";
 
-    public static void main(String[] args) throws InterruptedException, ExecutionException, JAXBException, XPathExpressionException, ParserConfigurationException, IOException, SAXException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException, JAXBException, XPathExpressionException, ParserConfigurationException, IOException, SAXException, DatatypeConfigurationException {
         ObjectFactory objectFactory = new ObjectFactory();
 
         // use the XML-POJO counterparts (JAXB classes)
@@ -78,8 +79,9 @@ public class MyApp {
 
         // TODO
 
-        // part 4 : using the JAXB-TYPE classes
+        // part 4 : using the JAXB classes (writing JAXB to XML)
 
-        MyAppHelper.myMarshaller();
+        MyAppHelper.marshallContact();
+        MyAppHelper.marshallEmployee();
     }
 }

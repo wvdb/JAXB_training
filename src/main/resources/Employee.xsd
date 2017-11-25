@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 sp1 (http://www.altova.com) by wim van den brande (ictdynamic) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:complexType name="projectType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="Name"/>
+			<xs:element name="ProjectStartDate" type="xs:dateTime" nillable="false"/>
+			<xs:element name="ProjectEndDate" type="xs:dateTime"/>
+			<xs:element name="Priority">
+				<xs:simpleType>
+					<xs:restriction base="xs:int">
+						<xs:minInclusive value="1"/>
+						<xs:maxInclusive value="5"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Complexity" default="Medium"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="departmentType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="Name"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Employee">
+		<xs:annotation>
+			<xs:documentation>an employee we will use in our HR-APP</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Fname" type="xs:string"/>
+				<xs:element name="Mname" type="xs:string"/>
+				<xs:element name="Lname" type="xs:string"/>
+				<xs:element name="Gender" type="xs:string"/>
+				<xs:element name="Department" type="departmentType" minOccurs="1" maxOccurs="2"/>
+				<xs:element name="Project" type="projectType" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Ssn" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
