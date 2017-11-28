@@ -68,18 +68,14 @@ public class MyApp {
 
         XPath xPath = XPathFactory.newInstance().newXPath();
         String expression = "/contact/phone";
-        NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODESET);
+        NodeList nodes = (NodeList) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODESET);
 
-        for (int n=0; n < nodeList.getLength(); n++) {
-            Node node = nodeList.item(n);
+        for (int lengthNodes=0; lengthNodes < nodes.getLength(); lengthNodes++) {
+            Node node = nodes.item(lengthNodes);
             System.out.println("Phone = " + node.getFirstChild().getNodeValue());
         }
 
-        // part 3 : XPATH - complete validation
-
-        // TODO
-
-        // part 4 : using the JAXB classes (writing JAXB to XML)
+        // part 3 : using the JAXB classes (writing JAXB to XML)
 
         MyAppHelper.marshallContact();
         MyAppHelper.marshallEmployee();

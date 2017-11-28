@@ -38,6 +38,7 @@ public class MyAppHelper {
         JAXBContext jaxbContext = JAXBContext.newInstance(Contact.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty("jaxb.formatted.output", true);
+        marshaller.setProperty("jaxb.noNamespaceSchemaLocation", "Contact.xsd");
 
         File file = new File(CONTACT_JAXB_XML2);
 
