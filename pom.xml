@@ -53,7 +53,7 @@
                         <hotfixBranchPrefix>hotfix-</hotfixBranchPrefix>
                         <versionTagPrefix>version-</versionTagPrefix>
                     </flowInitContext>
-                    <username>wimvandenbrande</username>
+                    <!--<username>wimvandenbrande</username>-->
                     <noDeploy>true</noDeploy>
                     <squash>true</squash>
                     <scmCommentPrefix>[RELEASE]</scmCommentPrefix>
