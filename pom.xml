@@ -23,7 +23,6 @@
                 <artifactId>jaxb2-maven-plugin</artifactId>
                 <version>2.3</version>
                 <executions>
-                    <!-- UCM XSD schema -->
                     <execution>
                         <id>xjc-Contact</id>
                         <goals>
