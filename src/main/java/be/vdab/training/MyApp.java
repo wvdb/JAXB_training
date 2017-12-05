@@ -10,6 +10,7 @@ import org.xml.sax.SAXException;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -24,7 +25,7 @@ import java.util.concurrent.ExecutionException;
 public class MyApp {
     private static final String CONTACT_JAXB_XML = "C:\\wim\\oak3 - cronos- training\\cursus_data_input_output\\Contact_JAXB.xml";
 
-    public static void main(String[] args) throws InterruptedException, ExecutionException, JAXBException, XPathExpressionException, ParserConfigurationException, IOException, SAXException {
+    public static void main(String[] args) throws InterruptedException, ExecutionException, JAXBException, XPathExpressionException, ParserConfigurationException, IOException, SAXException, DatatypeConfigurationException {
         ObjectFactory objectFactory = new ObjectFactory();
 
         // use the XML-POJO counterparts (JAXB classes)
@@ -67,19 +68,16 @@ public class MyApp {
 
         XPath xPath = XPathFactory.newInstance().newXPath();
         String expression = "/contact/phone";
-        NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODESET);
+        NodeList nodes = (NodeList) xPath.compile(expression).evaluate(xmlDocument, XPathConstants.NODESET);
 
-        for (int n=0; n < nodeList.getLength(); n++) {
-            Node node = nodeList.item(n);
+        for (int lengthNodes=0; lengthNodes < nodes.getLength(); lengthNodes++) {
+            Node node = nodes.item(lengthNodes);
             System.out.println("Phone = " + node.getFirstChild().getNodeValue());
         }
 
-        // part 3 : XPATH - complete validation
+        // part 3 : using the JAXB classes (writing JAXB to XML)
 
-        // TODO
-
-        // part 4 : using the JAXB-TYPE classes
-
-        MyAppHelper.myMarshaller();
+        MyAppHelper.marshallContact();
+        MyAppHelper.marshallEmployee();
     }
 }

@@ -1,10 +1,30 @@
+algemeen
+--------
+
+- wijziging 1
+
+- wijziging 2
+
 jgitflow-maven-plugin
 ---------------------
 
 https://gist.github.com/lemiorhan/97b4f827c08aed58a9d8
 
-gitflow
--------
+1a) create repo op github & do local git init
+1b) push master, maak develop aan en push
+
+2) gebruik jgitflow:
+2a) mvn jgitflow:feature-start
+2b) push en verifieer in github
+2c) maak nog wat wijzigingen
+2c1) mvn jgitflow:feature-finish -> error
+2c2) push + mvn jgitflow:feature-finish -> OK
+
+3a) controleer branch : zou develop moeten zijn
+3b) push nog een keer
+
+git & gitflow
+-------------
 
 https://github.com/nvie/gitflow
 
