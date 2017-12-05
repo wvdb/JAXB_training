@@ -1,6 +1,8 @@
 algemeen
 --------
 
+- wijziging 1
+
 - wijziging 2
 
 jgitflow-maven-plugin
