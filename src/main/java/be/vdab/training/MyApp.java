@@ -25,6 +25,10 @@ import java.util.concurrent.ExecutionException;
 public class MyApp {
     private static final String CONTACT_JAXB_XML = "C:\\wim\\oak3 - cronos- training\\cursus_data_input_output\\Contact_JAXB.xml";
 
+    public void nullMethod() {
+        System.out.println("Do nothing");
+    }
+
     public static void main(String[] args) throws InterruptedException, ExecutionException, JAXBException, XPathExpressionException, ParserConfigurationException, IOException, SAXException, DatatypeConfigurationException {
         ObjectFactory objectFactory = new ObjectFactory();
 
