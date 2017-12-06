@@ -29,6 +29,10 @@ public class MyApp {
 
     }
 
+    public void nullMethod() {
+        System.out.println("Do nothing");
+    }
+
     public static void main(String[] args) throws InterruptedException, ExecutionException, JAXBException, XPathExpressionException, ParserConfigurationException, IOException, SAXException, DatatypeConfigurationException {
         ObjectFactory objectFactory = new ObjectFactory();
 
