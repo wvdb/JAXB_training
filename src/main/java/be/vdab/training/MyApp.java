@@ -75,6 +75,7 @@ public class MyApp {
             System.out.println("Phone = " + node.getFirstChild().getNodeValue());
         }
 
+
         // part 3 : using the JAXB classes (writing JAXB to XML)
 
         MyAppHelper.marshallContact();
