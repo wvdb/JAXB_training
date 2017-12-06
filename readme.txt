@@ -6,7 +6,9 @@ algemeen
 - wijziging 3
 - wijziging 4
 
-- wijziging 0612
+- wijziging 0612A
+- wijziging 0612B
+- aanmaken FB
 
 jgitflow-maven-plugin
 ---------------------
