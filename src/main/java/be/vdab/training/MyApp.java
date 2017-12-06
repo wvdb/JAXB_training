@@ -59,6 +59,9 @@ public class MyApp {
         File file = new File(CONTACT_JAXB_XML);
         marshaller.marshal(contact, file);
 
+
+
+
         // part 2 : additional steps: start from an XML file and retrieve nodes
         // XPATH - retrieve phones
 
