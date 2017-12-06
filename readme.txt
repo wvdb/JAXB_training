@@ -6,6 +6,8 @@ algemeen
 - wijziging 3
 - wijziging 4
 
+- wijziging 0612
+
 jgitflow-maven-plugin
 ---------------------
 
